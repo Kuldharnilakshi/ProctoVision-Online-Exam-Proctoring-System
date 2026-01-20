@@ -1,0 +1,178 @@
+/* ===== Global ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* ===== Layout ===== */
+.container {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+/* ===== Cards ===== */
+.exam-section,
+.proctor-section {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.exam-section {
+  flex: 2;
+}
+
+.proctor-section {
+  flex: 1;
+  text-align: center;
+}
+
+/* ===== Question UI ===== */
+.question-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  background: #f9fafb;
+  margin-top: 15px;
+}
+
+.question-box p {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ===== Options ===== */
+.question-box label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.question-box label:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.question-box input[type="radio"] {
+  accent-color: #2563eb;
+}
+
+/* ===== Navigation Buttons ===== */
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ===== Video ===== */
+video {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 12px;
+}
+
+/* ===== Status Box ===== */
+.status {
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.status.normal {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.violation {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ===== Info ===== */
+.info p {
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+/* ===== Modal (Exam Report) ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background: white;
+  padding: 28px;
+  margin: 10% auto;
+  width: 360px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #1e3a8a;
+}
+
+.modal-content p {
+  font-size: 15px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  width: 100%;
+}

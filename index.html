@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ProctoVision – Smart Online Exam Proctoring</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>ProctoVision – Smart Online Exam Proctoring System</h2>
+</header>
+
+<main class="container">
+
+  <!-- Exam Section -->
+  <section class="exam-section">
+    <h3>Online Examination</h3>
+    <p><strong>Subject:</strong> Computer Networks</p>
+
+    <div id="questionContainer"></div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn" onclick="prevQuestion()" disabled>Previous</button>
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+      <button id="submitBtn" onclick="submitExam()" style="display:none;">Submit Exam</button>
+    </div>
+  </section>
+
+  <!-- Proctor Section -->
+  <section class="proctor-section">
+    <h3>Live Proctoring</h3>
+
+    <video id="video" autoplay muted playsinline></video>
+
+    <div id="statusBox" class="status normal">🟢 Status: Normal</div>
+
+    <div class="info">
+      <p>Violations: <span id="violationCount">0</span></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Result Modal -->
+<div id="resultModal" class="modal">
+  <div class="modal-content">
+    <h3>Exam Report</h3>
+    <p id="scoreText"></p>
+    <p id="violationText"></p>
+    <p id="finalStatus"></p>
+    <button onclick="closeReport()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
